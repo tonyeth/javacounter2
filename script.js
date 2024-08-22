@@ -1,11 +1,13 @@
 
+
+// Funzione per creare l'interfaccia del counter
 function createCounterUI() {
     const container = document.getElementById('counter-app');
 
     const title = document.createElement('h1');
     title.innerText = 'Counter';
     container.appendChild(title);
-    
+
     const counterDisplay = document.createElement('span');
     counterDisplay.id = 'counter';
     counterDisplay.innerText = '0'; // Valore iniziale
@@ -21,7 +23,7 @@ function createCounterUI() {
     incrementButton.onclick = incrementCounter;
     container.appendChild(incrementButton);
 }
-    
+
 // Variabile per mantenere lo stato del counter
 let counterValue = 0;
 

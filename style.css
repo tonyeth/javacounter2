@@ -26,10 +26,9 @@ button {
     background-color: #bdcddd;
     color: white;
     
-}
+  }
 
-  
-  button:hover {
+ button:hover {
     background-color: #0452aa; /* Green */
     color: white;
   }

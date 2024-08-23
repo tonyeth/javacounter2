@@ -4,10 +4,6 @@
 
 "Counter App" is a simple web application that allows users to increment or decrement a counter. The interface is designed to be intuitive and easy to use, with buttons to increase or decrease the displayed counter value. The layout is centered, with a clean, modern design that is suitable for a variety of uses.
 
-## Demo
-
-You can view a live demo of the Counter App here: [Demo Link](#) (replace with actual link if available).
-
 ## Project Structure
 
 - **`index.html`**: Contains the basic structure of the page, including references to the CSS stylesheet and JavaScript file.

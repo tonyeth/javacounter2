@@ -20,10 +20,3 @@ You can view a live demo of the Counter App here: [Demo Link](#) (replace with a
 - **Dynamic Update**: The counter value is dynamically updated on the page whenever a button is pressed.
 - **Responsive Design**: The page is vertically and horizontally centered and adapted to look good on different devices, thanks to the use of Flexbox.
 
-## Installation
-
-To run the application locally, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/your-repo.git

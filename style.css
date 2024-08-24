@@ -23,13 +23,13 @@ button {
     cursor: pointer;
     border-radius: 10px;
     border: none;
-    background-color: #bdcddd;
-    color: white;
+    background-color: #26486b;
+    color: rgb(255, 255, 255);
     
   }
 
  button:hover {
-    background-color: #0452aa; /* Green */
+    background-color: #0452aa; 
     color: white;
   }
 
@@ -39,3 +39,11 @@ button {
     margin: 30px 0;
     display: block;
 }
+button.reset {
+    background-color: #dc3545;
+}
+
+button.reset:hover {
+    background-color: #ff0019; 
+    color: white;
+  }

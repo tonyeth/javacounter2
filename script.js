@@ -15,6 +15,7 @@ function createCounterUI() {
     
     const buttonContainer = document.createElement('div');
     buttonContainer.className = 'button-container';
+    container.appendChild(buttonContainer);
 
    
     const decrementButton = document.createElement('button');
@@ -36,7 +37,7 @@ function createCounterUI() {
     buttonContainer.appendChild(resetButton);
 
   
-    container.appendChild(buttonContainer);
+    
 }
 let counterValue = 0;
 

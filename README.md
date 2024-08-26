@@ -15,6 +15,5 @@
 - **Increment/Decrement**: Users can increment or decrement the counter using the "+" and "-" buttons.
 - **Reset Button**: Users can easily reset the counter without reloading the page, bringing the count to 0.
 - **Dynamic Update**: The counter value is dynamically updated on the page whenever a button is pressed.
-- **Responsive Design**: The page is vertically and horizontally centered and adapted to look good on different devices, thanks to the use of Flexbox.
 
 

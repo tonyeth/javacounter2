@@ -1,50 +1,52 @@
+function createElement(tag, className, innerHTML, href) {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    if (innerHTML) element.innerHTML = innerHTML;
+    return element;
+}
+
 function createCounterUI() {
     const container = document.getElementById('counter-app');
 
-   
-    const title = document.createElement('h1');
-    title.innerText = 'Counter';
+    const title = createElement('h1', '', 'Counter');
     container.appendChild(title);
 
-    
-    const counterDisplay = document.createElement('span');
+    const counterDisplay = createElement('span', '', '0');
     counterDisplay.id = 'counter';
-    counterDisplay.innerText = '0';
     container.appendChild(counterDisplay);
 
-    
-    const buttonContainer = document.createElement('div');
-    buttonContainer.className = 'button-container';
+    const buttonContainer = createElement('div', 'button-container');
     container.appendChild(buttonContainer);
-
-   
-    const decrementButton = document.createElement('button');
-    decrementButton.innerText = '-';
-    decrementButton.onclick = decrementCounter;
-    buttonContainer.appendChild(decrementButton);
-
     
-    const incrementButton = document.createElement('button');
-    incrementButton.innerText = '+';
-    incrementButton.onclick = incrementCounter;
-    buttonContainer.appendChild(incrementButton);
+    const buttons = [
+        { text: '-', action: 'decrement', className: 'button' },
+        { text: '+', action: 'increment', className: 'button' },
+        { text: 'Reset', action: 'reset', className: 'reset' }
+    ];
 
-  
-    const resetButton = document.createElement('button');
-    resetButton.innerText = 'Reset';
-    resetButton.className = 'reset';
-    resetButton.onclick = resetCounter;
-    buttonContainer.appendChild(resetButton);
+    buttons.forEach(btn => {
+        const button = createElement('button', btn.className || '', btn.text);
+        button.dataset.action = btn.action;
+        buttonContainer.appendChild(button);
+    });
 
-  
-    
+    buttonContainer.addEventListener('click', handleButtonClick);
 }
+
 let counterValue = 0;
 
 function updateCounterDisplay() {
     const counterDisplay = document.getElementById('counter');
     counterDisplay.innerText = counterValue;
 }
+
+function handleButtonClick(event) {
+    const action = event.target.dataset.action;
+    if (action === 'increment') incrementCounter();
+    else if (action === 'decrement') decrementCounter();
+    else if (action === 'reset') resetCounter();
+}
+
 function incrementCounter() {
     counterValue++;
     updateCounterDisplay();
@@ -55,11 +57,9 @@ function decrementCounter() {
     updateCounterDisplay();
 }
 
-
 function resetCounter() {
     counterValue = 0;
     updateCounterDisplay();
 }
-
 
 document.addEventListener('DOMContentLoaded', createCounterUI);

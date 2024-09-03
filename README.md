@@ -17,7 +17,7 @@ The `index.html` file is the backbone of the application, defining the basic str
 
 ### `style.css`
 
-The `style.css` file handles the visual styling and layout of the application. Key components include:
+The `style.css` file, in css folder, handles the visual styling and layout of the application. Key components include:
 
 - **Global Styles**: The body uses Flexbox to center the content, with a neutral background color, a sans-serif font family, and zero margins to ensure the content fills the viewport.
 - **#counter-app**: This selector styles the main container of the counter, adding padding, a background color, rounded corners, and a shadow effect to create a card-like appearance.
@@ -26,7 +26,7 @@ The `style.css` file handles the visual styling and layout of the application. K
 
 ### `script.js`
 
-The `script.js` file contains all the logic needed to create the user interface and handle user interactions. This is where the dynamic creation of elements and the functionality of the counter are defined.
+The `script.js` file, in js folder, contains all the logic needed to create the user interface and handle user interactions. This is where the dynamic creation of elements and the functionality of the counter are defined.
 
 #### Key Functions
 
